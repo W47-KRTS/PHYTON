@@ -1,1 +1,116 @@
+a = [3, 3, 8, 9, 1]
+b = [5, 8, 6, 4]
+s1 = sum(a)
+s4 = sum(b)
+S1 = a+b
+a.insert(0, 1)
+b.remove(4)
+s3 = sum(b)
+s = sum(a)
+S = a+b
+print(S1)
+print(S)
+print(s, s1)
+print(s3, s4)
+
+#name = "Man"
+#print(name)
+#print(type(name))
+
+#first_name = "man "
+#last_name = "Wolf"
+#full_name = first_name + last_name
+#print(full_name)
+
+#age = 26
+#age += 1
+#print(age)
+#print(type(age))
+#print("Your age is " + str(age))
+
+name1= "wolverine"
+print(name1)
+fname1= " volverine"
+full_name1 = name1 + fname1
+print(full_name1)
+
+age1= 21
+age1 +=2
+
+print("Your age is " + str(age1) )
+
+h = 180.6554
+print(type(h))
+print("Your high is " +str(h) + " cm")
+
+human= False
+print(human)
+print("Are you a human? "
+      + str(human))
+print(type(human))
+
+# multiple assigment
+
+german, latin, roma = "21" , "25" , "30"
+print(german,latin, roma)
+german=latin=roma = 47
+print(german, latin, roma)
+
+name2 = "wolverine"
+print(len(name2))
+print(name2.find("o"))
+print(name2.capitalize())
+print(name2.upper())
+print(name2.lower())
+print(name2.isdigit())
+print(name2.isalpha())
+print(name2.count("e"))
+print(name2.replace("e", "a"))
+print(name2*3)
+
+#type casting = convert the data type of a value to
+# another data type
+
+x = 1       #int
+y =  1.5    #float
+z = "3"     #str
+
+print(x, y, z)
+y = int(y)
+print(x, y, z)
+
+#z = z*3
+print(x, y, z)
+
+z = int(z)
+print(x, y, z*3)
+
+x = float(x)
+y = float(y)
+z = float(z)
+print(x, y, z)
+
+print("Numerele sunt: " + str(x), str(y), str(z))
+
+#user input
+
+n1=input("What is your name? ")
+print("Hello, " +n1.capitalize() +"!")
+
+age2 = int(input("What is your age? "))
+print("Now your age is: " + str(age2+1) + " years old")
+print("Magic, isn't it? :))))")
+
+high = float(input("Now, how high are you? "))
+print("Well, well...")
+input("Are you sure about that number? ")
+
+input("You should be higher, don't you think? ")
+
+print("Well, let's see what we can do about it. ;)")
+
+print("I think this is much better: " +str(high+10) +"cm")
+input("Happier now? ")
+
+print("I'm glad. Bye, bye! ;)")
 
