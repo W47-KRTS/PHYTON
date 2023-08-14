@@ -323,3 +323,22 @@ def menu_is_boring(meals):
 
 
 print(menu_is_boring([1, 1, 3, 5, 5, 6]))
+
+# Strings and Dictionaries
+
+a = ''
+b = "it's ok"
+c = 'it\'s ok'
+d = """hey"""
+e = '\n'
+print(len(a), len(b), len(c), len(d), len(e))
+print(bool(a))
+
+
+def is_valid_zip(zip_code):
+    """Returns whether the input string is a valid (5 digit) zip code
+     """
+    return len(zip_code) == 5 and zip_code.isdigit()
+
+
+print(is_valid_zip(f'45876'))
