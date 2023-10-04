@@ -1,0 +1,11 @@
+import os
+
+email_txt = "C:\\Users\\HE10\\Desktop\\Macros\\STEP\\DEV\\30 Days of python\\Day 10\\Templates\\email.txt"
+
+content = ""
+
+with open(email_txt, 'r') as f:
+        content = f.read()
+
+
+print(content.format(name='Bro'))
