@@ -39,3 +39,44 @@ files_dir = os.path.join(BASE_DIR, 'images')
 
 if not os.path.exists(files_dir):
     print('This is not a valid path')
+
+# making a file and generating images 
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+files_dir = os.path.join(BASE_DIR, 'images')
+
+os.makedirs(files_dir, exist_ok=True)
+
+my_images = range(0, 12)
+
+for i in my_images:
+        fname = f"{i}.jpg"
+        file_path = os.path.join(files_dir, fname)
+        if os.path.exists(file_path):
+                print(f'skipped fname')
+                continue
+        with open(file_path, 'w') as f:
+                f.write('Hello world')
+
+
+# Importing an image from an url
+
+import os
+import requests
+
+THIS_FILE_PATH = os.path.abspath(__file__)
+BASE_DIR = os.path.dirname(THIS_FILE_PATH)
+DOWNLOAD_DIR = os.path.join(BASE_DIR, "downloads")
+os.makedirs(DOWNLOAD_DIR, exist_ok=True)
+
+downloaded_img_path = os.path.join(DOWNLOAD_DIR, '1.jpg')
+url = "https://cdn.britannica.com/97/158797-050-ABECB32F/North-Cascades-National-Park-Lake-Ann-park.jpg"
+
+
+r = requests.get(url, stream=True)
+r.raise_for_status() #200
+with open(downloaded_img_path, 'wb') as f:
+    f.write(r.content)
+
