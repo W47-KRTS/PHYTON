@@ -1,3 +1,4 @@
+# try 1
 import os
 
 email_txt = "C:\\Users\\HE10\\Desktop\\Macros\\STEP\\DEV\\30 Days of python\\Day 10\\Templates\\email.txt"
@@ -9,3 +10,32 @@ with open(email_txt, 'r') as f:
 
 
 print(content.format(name='Bro'))
+
+# try 2
+import os
+
+this_file_path = os.path.abspath(__file__)
+#print(this_file_path)
+BASE_DIR =  os.path.dirname(this_file_path)
+ENTIRE_PROJECT_DIR = os.path.dirname(BASE_DIR)
+#print(BASE_DIR, ENTIRE_PROJECT_DIR)
+
+email_txt = os.path.join(BASE_DIR, "Templates", "email.txt")
+
+content = ""
+
+with open(email_txt, 'r') as f:
+        content = f.read()
+
+
+print(content.format(name='Bro'))
+
+# reading from a file that has a specific path
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+files_dir = os.path.join(BASE_DIR, 'images')
+
+if not os.path.exists(files_dir):
+    print('This is not a valid path')
