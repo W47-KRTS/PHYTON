@@ -80,3 +80,87 @@ r.raise_for_status() #200
 with open(downloaded_img_path, 'wb') as f:
     f.write(r.content)
 
+Day 11
+# class - allows to attach state-like items to them
+class Animal:
+    noise = 'Rrrr' 
+    # noise is a propriety of the class - attached to a class
+    def make_noise(self):
+        print(f"{self.noise}")
+        
+    def set_noise(self, new_noise):
+        self.noise = new_noise 
+# code writen in the terminal 
+"""
+>>> obj = Animal()
+>>> obj.noise()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object is not callable
+>>> obj.noise  
+'Rrrr'
+>>> obj.set_noise("Hmmmm")
+>>> obj.noise
+'Hmmmm'
+>>> obj.make_noise()
+Hmmmm
+>>> abc = Animal()
+>>> abc.make_noise()
+Rrrr
+>>> abc.set_noise("Another noise")
+>>> abc.make_noise() 
+Another noise
+>>> obj.make_noise()
+Hmmmm
+>>>
+"""
+# continuation
+# class - allows to attach state-like items to them
+class Animal:
+    noise = 'Rrrr' 
+    color = 'Red'
+    # noise is a propriety of the class - attached to a class
+    def make_noise(self):
+        print(f"{self.noise}")
+    def set_noise(self, new_noise):
+        self.noise = new_noise  
+    def get_noise(self):
+        return self.noise
+    def set_noise(self, new_noise):
+        self.noise = new_noise
+        return self.noise
+    def get_color(self):
+        return self.color
+    def set_color(self, new_color):
+        self.noise = new_color
+        return self.color
+    
+# Inheritance
+class Wolf(Animal):
+    noise = 'grrrrrr'
+    
+# Inheritance
+
+class Wolf(Animal):
+    noise = 'grrrrrr'
+
+class BabyWolf(Wolf):
+    color = 'grey'
+
+# code writen in the terminal 
+python3 -i animals.py
+>>> Wolf
+<class '__main__.Wolf'>
+>>> a = Wolf()
+>>> a.make_noise()
+grrrrrr
+python3 -i animals.py
+>>> BabyWolf
+<class '__main__.BabyWolf'>
+>>> obj = BabyWolf()
+>>> obj.make_noise()
+grrrrrr
+>>> obj.get_color()
+'grey'
+>>>
+
